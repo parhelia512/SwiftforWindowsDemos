@@ -20,7 +20,7 @@ wc.lpszClassName = classNamePtr
 wc.lpfnWndProc = { hwnd, uMsg, wParam, lParam in
     switch Int32(uMsg) {
     case WM_DESTROY:
-        PostQuitMessage(0);
+        PostQuitMessage(0)
     case WM_PAINT:
         var ps = PAINTSTRUCT()
         let hdc = BeginPaint(hwnd, &ps)
@@ -47,3 +47,4 @@ if hwnd != nil {
         DispatchMessageA(&msg)
     }
 }
+
